@@ -1,16 +1,20 @@
 
 class PlayFormat {
-    static ACT = /^ACT\ (I|V|X|L|C|D|M)+$/i;
 
-    static SCENE = /^SCENE\ (I|V|X|L|C|D|M)+\.(.+)/i;
-
-    isAct(text) {
-        return PlayFormat.ACT.test(text);
-    }
-
-    isScene(text) {
-        return PlayFormat.SCENE.test(text);
-    }
+//    toStructured() {
+//        const structuredData = {};
+//        let currentAct = '';
+//        let currentScene = '';
+//        this.content.forEach((lineData) => {
+//            if (this.isAct()) {
+//                currentAct =
+//            }
+//            switch(lineData.text_entry) {
+//                case
+//            }
+//        })
+//        return this.content;
+//    }
 }
 
 export default PlayFormat;
