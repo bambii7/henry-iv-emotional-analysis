@@ -10,6 +10,7 @@
     "sinon": true,
     "Henry": true,
     "jasmine": true,
+    "Promise": true,
     "__DEV__": true
   },
   "ecmaFeatures": {
