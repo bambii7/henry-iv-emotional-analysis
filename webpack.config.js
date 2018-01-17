@@ -16,7 +16,9 @@ module.exports = {
     output: {
         path: path.join(__dirname, '/dist/'),
         filename: '[name].js',
-        publicPath: '/'
+        publicPath: '/',
+        library: 'Henry',
+        libraryTarget: 'var'
     },
     plugins: [
         new HtmlWebpackPlugin({
