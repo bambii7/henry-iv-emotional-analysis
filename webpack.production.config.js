@@ -16,8 +16,8 @@ module.exports = {
     // Where you want the output to go
     output: {
         path: path.join(__dirname, '/dist/'),
-        filename: '[name]-[hash].min.js',
-        publicPath: '/',
+        filename: '[name].min.js',
+        publicPath: './',
         library: 'Henry',
         libraryTarget: 'var'
     },
@@ -38,7 +38,7 @@ module.exports = {
         // extracts the css from the js files and puts them on a separate .css file. this is for
         // performance and is used in prod environments. Styles load faster on their own .css
         // file as they dont have to wait for the JS to load.
-        new ExtractTextPlugin('[name]-[hash].min.css'),
+        new ExtractTextPlugin('[name].min.css'),
         // handles uglifying js
         new webpack.optimize.UglifyJsPlugin({
             compressor: {
