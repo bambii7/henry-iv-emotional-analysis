@@ -29,4 +29,13 @@ describe('LineModel', () => {
         line = new Henry.LineModel('So shaken as we are, so wan with care');
         expect(line.isScene()).toEqual(false);
     });
+
+    it('should return the line category', () => {
+        let line = new Henry.LineModel('SCENE I. Something');
+        expect(line.detectType()).toEqual(Henry.LineModel.TYPE.SCENE);
+        line = new Henry.LineModel('ACT II');
+        expect(line.detectType()).toEqual(Henry.LineModel.TYPE.ACT);
+        line = new Henry.LineModel('So shaken as we are, so wan with care');
+        expect(line.detectType()).toEqual(Henry.LineModel.TYPE.CONTENT);
+    });
 });

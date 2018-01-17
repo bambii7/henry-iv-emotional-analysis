@@ -8,7 +8,6 @@ class LineModel {
 
     static TYPES = [LineModel.TYPE.ACT, LineModel.TYPE.SCENE, LineModel.TYPE.CONTENT];
 
-
     static ACT = /^ACT\ (I|V|X|L|C|D|M)+$/i;
 
     static SCENE = /^SCENE\ (I|V|X|L|C|D|M)+\.(.+)/i;
