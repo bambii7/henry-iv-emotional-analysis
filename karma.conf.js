@@ -14,7 +14,7 @@ module.exports = function(config) {
         // list of files / patterns to load in the browser
         files: [
             'dist/main.js',
-            'test/**/*Spec.js'
+            'test/frontend/**/*Spec.js'
         ],
 
 //        customContextFile: 'dist/index.html',

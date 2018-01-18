@@ -1,8 +1,15 @@
 'use strict';
+const describe   = require('mocha').describe;
+const it         = require('mocha').it;
+const expect     = require('chai').expect;
+
+const PlayFormat = require('../../../api/service/PlayFormat');
+
+'use strict';
 describe('PlayFormat', () => {
     it('should be of type PlayFormat', () => {
-        const playFormat = new Henry.PlayFormat();
-        expect(playFormat).toEqual(jasmine.any(Henry.PlayFormat));
+        const playFormat = new PlayFormat();
+        expect(playFormat).to.be.an.instanceof(PlayFormat);
     });
 
     it('should structure play data into acts & scenes', () => {
@@ -19,8 +26,8 @@ describe('PlayFormat', () => {
             {text_entry: 'And breathe short-winded accents of new broils'},
             {text_entry: 'Of hostile paces: those opposed eyes'}
         ];
-        const actSceneData = Henry.PlayFormat.toStructured(playData);
-        expect(actSceneData).toEqual(
+        const actSceneData = PlayFormat.toStructured(playData);
+        expect(actSceneData).to.deep.equal(
             {
                 'ACT I': {
                     'SCENE I. London. The palace.': 'Enter KING HENRY, LORD JOHN OF LANCASTER, the EARL of WESTMORELAND, SIR WALTER BLUNT, and others',
