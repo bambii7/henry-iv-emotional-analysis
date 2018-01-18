@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/karma/bin/karma start --single-run",
+    "apitest": "./node_modules/mocha/bin/mocha 'test/api/**/*Spec.js'",
     "start": "node server",
     "build": "rimraf dist && webpack --config ./webpack.config.js --progress --profile --colors",
     "eslint": "eslint ."
@@ -40,6 +41,7 @@
     "babel-preset-es2015": "^6.6.0",
     "babel-preset-react": "^6.5.0",
     "babel-preset-stage-0": "^6.5.0",
+    "chai": "^4.1.2",
     "css-loader": "^0.23.1",
     "eslint": "^2.9.0",
     "eslint-loader": "^1.5.0",
@@ -50,6 +52,7 @@
     "karma": "^2.0.0",
     "karma-chrome-launcher": "^2.2.0",
     "karma-jasmine": "^1.1.1",
+    "mocha": "^5.0.0",
     "node-sass": "^3.7.0",
     "postcss-loader": "^0.9.1",
     "react-addons-test-utils": "^15.0.2",
