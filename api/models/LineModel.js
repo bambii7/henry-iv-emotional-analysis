@@ -1,17 +1,4 @@
-
 class LineModel {
-    static TYPE = {
-        ACT: 'ACT',
-        SCENE: 'SCENE',
-        CONTENT: 'CONTENT'
-    };
-
-    static TYPES = [LineModel.TYPE.ACT, LineModel.TYPE.SCENE, LineModel.TYPE.CONTENT];
-
-    static ACT = /^ACT\ (I|V|X|L|C|D|M)+$/i;
-
-    static SCENE = /^SCENE\ (I|V|X|L|C|D|M)+\.(.+)/i;
-
     constructor(text) {
         this.text = text;
     }
@@ -35,4 +22,16 @@ class LineModel {
     }
 }
 
-export default LineModel;
+LineModel.TYPE = {
+    ACT: 'ACT',
+    SCENE: 'SCENE',
+    CONTENT: 'CONTENT'
+};
+
+LineModel.TYPES = [LineModel.TYPE.ACT, LineModel.TYPE.SCENE, LineModel.TYPE.CONTENT];
+
+LineModel.ACT = /^ACT\ (I|V|X|L|C|D|M)+$/i;
+
+LineModel.SCENE = /^SCENE\ (I|V|X|L|C|D|M)+\.(.+)/i;
+
+module.exports = LineModel;

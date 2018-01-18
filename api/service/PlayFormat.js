@@ -1,4 +1,4 @@
-import LineModel from '../models/LineModel';
+const LineModel = require('../models/LineModel');
 
 class PlayFormat {
 
@@ -32,4 +32,4 @@ class PlayFormat {
     }
 }
 
-export default PlayFormat;
+module.exports = PlayFormat;
