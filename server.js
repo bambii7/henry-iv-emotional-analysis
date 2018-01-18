@@ -1,17 +1,19 @@
 const express = require('express');
 const fs = require('fs');
 const app = express();
+const emotionFilePath = __dirname + '/api/data/henry_iv_emotion_data.json'
 
 app.use(express.static('dist'));
 
+
 app.get('/api/henry-emotional-content', function(req, res) {
-//    const readable = fs.createReadStream(emotionFilePath);
-//    readable.pipe(res);
+    const readable = fs.createReadStream(emotionFilePath);
+    readable.pipe(res);
     
-    const text = 'So shaken as we are, so wan with care';
-    TextEmotion.getEmotion(text).then(function (data) {
-        res.json(data);
-    });
+//    const text = 'So shaken as we are, so wan with care';
+//    TextEmotion.getEmotion(text).then(function (data) {
+//        res.json(data);
+//    });
     
 });
 
