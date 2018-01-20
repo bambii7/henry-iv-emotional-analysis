@@ -17,7 +17,7 @@ class EmotionRow extends React.Component {
                 Fear: {this.props.emotion.fear}<br />
                 Disgust: {this.props.emotion.disgust}<br />
                 Anger: {this.props.emotion.anger}
-                <RadarChartView />
+                <RadarChartView width="300" />
             </div>
         );
     }

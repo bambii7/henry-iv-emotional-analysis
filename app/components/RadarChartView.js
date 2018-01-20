@@ -2,6 +2,7 @@ import React from 'react';
 
 class RadarChartView extends React.Component {
     static defaultProps = {
+        width: 100,
         data: [
             {x: 100, y: 20},
             {x: 170, y: 60},
@@ -12,7 +13,8 @@ class RadarChartView extends React.Component {
         ]
     }
     static propTypes = {
-        data: React.PropTypes.object
+        data: React.PropTypes.object,
+        width: React.PropTypes.number
     }
     constructor(props) {
         super(props);
@@ -20,7 +22,7 @@ class RadarChartView extends React.Component {
 
     render() {
         return (
-            <svg id="radar" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <svg id="radar" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width={this.props.width}>
                 <circle cx="100" cy="100" r="80" fill="transparent" stroke="grey" />
                 <circle cx="100" cy="100" r="1" stroke="blue" />
 
