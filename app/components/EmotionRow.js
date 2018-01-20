@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import RadarChartView from './RadarChartView';
 
 // {sadness, joy, fear, disgust, anger}
 class EmotionRow extends React.Component {
@@ -17,7 +16,6 @@ class EmotionRow extends React.Component {
                 Fear: {this.props.emotion.fear}<br />
                 Disgust: {this.props.emotion.disgust}<br />
                 Anger: {this.props.emotion.anger}
-                <RadarChartView width="300" />
             </div>
         );
     }

@@ -3,7 +3,8 @@ import React from 'react';
 class RadarChartView extends React.Component {
     static defaultProps = {
         width: 100,
-        data: [
+        path: '',
+        points: [
             {x: 100, y: 20},
             {x: 170, y: 60},
             {x: 170, y: 140},
@@ -12,12 +13,11 @@ class RadarChartView extends React.Component {
             {x: 31, y: 60}
         ]
     }
+
     static propTypes = {
-        data: React.PropTypes.object,
-        width: React.PropTypes.number
-    }
-    constructor(props) {
-        super(props);
+        points: React.PropTypes.array,
+        width: React.PropTypes.number,
+        path: React.PropTypes.string
     }
 
     render() {
@@ -26,11 +26,11 @@ class RadarChartView extends React.Component {
                 <circle cx="100" cy="100" r="80" fill="transparent" stroke="grey" />
                 <circle cx="100" cy="100" r="1" stroke="blue" />
 
-                {this.props.data.map((point, id) =>
+                {this.props.points.map((point, id) =>
                     <circle key={id} cx={point.x} cy={point.y} r="1" stroke="red" />
                 )}
+                <path d={this.props.path} fill="rgba(128,198,252,0.5)" />
 
-                <path d="M100 20 L 100 20 L 170 60 L 170 140 L 100 180 L 31 140 L 31 60 L 100 20" fill="rgba(128,198,252,0.5)" />
             </svg>
         );
     }
